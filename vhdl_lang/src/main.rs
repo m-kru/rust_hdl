@@ -77,6 +77,7 @@ fn main() {
             num_files += 1;
             num_lines += source_file.num_lines();
         }
+        let duration_per_file = duration.checked_div(num_files as u32).unwrap();
         let duration_per_line = duration.checked_div(num_lines as u32).unwrap();
 
         println!(
@@ -84,8 +85,9 @@ fn main() {
             num_files, num_lines
         );
         println!(
-            "Total time to run was {} ms with an average of {} ns per line",
+            "Total time to run was {} ms with an average of {} us per file and an average {} ns per line",
             duration.as_millis(),
+            duration_per_file.as_micros(),
             duration_per_line.as_nanos()
         );
     }
