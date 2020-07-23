@@ -899,7 +899,7 @@ pub struct ConcurrentAssertStatement {
     pub statement: AssertStatement,
 }
 
-/// 11.6 Concurrent signal assignment statements
+/// LRM 11.6 Concurrent signal assignment statements
 #[derive(PartialEq, Debug, Clone)]
 pub struct ConcurrentSignalAssignment {
     pub postponed: bool,
@@ -909,7 +909,7 @@ pub struct ConcurrentSignalAssignment {
     pub rhs: AssignmentRightHand<Waveform>,
 }
 
-/// 11.7 Component instantiation statements
+/// LRM 11.7 Component instantiation statements
 #[derive(PartialEq, Debug, Clone)]
 pub enum InstantiatedUnit {
     Component(WithPos<SelectedName>),
@@ -917,7 +917,7 @@ pub enum InstantiatedUnit {
     Configuration(WithPos<SelectedName>),
 }
 
-/// 11.7 Component instantiation statements
+/// LRM 11.7 Component instantiation statements
 #[derive(PartialEq, Debug, Clone)]
 pub struct InstantiationStatement {
     pub unit: InstantiatedUnit,
@@ -925,7 +925,7 @@ pub struct InstantiationStatement {
     pub port_map: Vec<AssociationElement>,
 }
 
-/// 11.8 Generate statements
+/// LRM 11.8 Generate statements
 #[derive(PartialEq, Debug, Clone)]
 pub struct GenerateBody {
     pub alternative_label: Option<Ident>,
@@ -933,7 +933,7 @@ pub struct GenerateBody {
     pub statements: Vec<LabeledConcurrentStatement>,
 }
 
-/// 11.8 Generate statements
+/// LRM 11.8 Generate statements
 #[derive(PartialEq, Debug, Clone)]
 pub struct ForGenerateStatement {
     pub index_name: Ident,
@@ -941,7 +941,7 @@ pub struct ForGenerateStatement {
     pub body: GenerateBody,
 }
 
-/// 11.8 Generate statements
+/// LRM 11.8 Generate statements
 pub type IfGenerateStatement = Conditionals<GenerateBody>;
 pub type CaseGenerateStatement = Selection<GenerateBody>;
 
