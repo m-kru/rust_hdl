@@ -15,6 +15,8 @@ pub enum Severity {
     Error,
 }
 
+/// A message supposed to be associated with source position.
+/// For example a message about syntax error.
 #[must_use]
 #[derive(PartialEq, Debug, Clone, Eq, Hash)]
 pub struct Diagnostic {

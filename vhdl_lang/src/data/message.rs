@@ -14,6 +14,7 @@ pub enum MessageType {
     Log,
 }
 
+/// A general purpose message. For example a message about failure to open a file.
 #[must_use]
 #[derive(Debug, PartialEq)]
 pub struct Message {
