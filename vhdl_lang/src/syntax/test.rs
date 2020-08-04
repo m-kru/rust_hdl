@@ -93,7 +93,7 @@ impl Code {
         }
     }
 
-    /// Create new Code from n:th occurence of substr
+    /// Create new Code from n:th occurrence of substr
     pub fn s(&self, substr: &str, occurence: usize) -> Code {
         self.in_range(substr_range(
             &self.pos.source,
@@ -103,7 +103,7 @@ impl Code {
         ))
     }
 
-    /// Create new Code from first n:th occurence of substr
+    /// Create new Code from first occurrence of substr
     pub fn s1(&self, substr: &str) -> Code {
         self.s(substr, 1)
     }

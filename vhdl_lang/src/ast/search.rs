@@ -39,7 +39,7 @@ impl SearchState {
 }
 
 pub trait Searcher {
-    /// Search an position that has a reference to a declaration
+    /// Search a position that has a reference to a declaration
     fn search_pos_with_ref(&mut self, _pos: &SrcPos, _ref: &Reference) -> SearchState {
         NotFinished
     }
